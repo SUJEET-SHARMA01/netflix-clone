@@ -1,50 +1,43 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import "./home.css";
 import TitleCard from "../../components/TitleCard/TitleCard";
+import hero_banner from "../../assets/hero_banner.jpg";
+import hero_title from "../../assets/hero_title.png";
+import Footer from '../../components/Footer/Footer'
 
+import "./home.css";
 function Home() {
   return (
-    <div className="relative h-screen w-full text-white">
-      {/* Navbar */}
+    <div className="home">
       <Navbar />
 
-      {/* Hero Section */}
-      <div className="relative h-screen w-full">
-        {/* Background image */}
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src="hero_banner.jpg"
-          alt="Hero Background"
-        />
+      <div className="hero">
+        <img src={hero_banner} alt="" className="banner-img" />
 
-        {/* Overlay gradient */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-black"></div>
+        <div className="hero-caption">
+          <img src={hero_title} alt="" className="caption-img" />
 
-        {/* Content */}
-        <div className="absolute bottom-20 left-10 md:left-20 max-w-xl space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">
-            Watch Your Favorite Movies
-          </h1>
-          <p className="text-sm md:text-lg">
-            Stream unlimited movies, TV shows, and more. Watch anywhere. Cancel
-            anytime.
+          <p className="hero-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit...
           </p>
 
-          {/* Buttons */}
-          <div className="flex space-x-4">
-            <button className="bg-red-700 hover:bg-red-500 text-white font-semibold px-6 py-2 !important rounded transition duration-300">
-              Play
-            </button>
-
-            <button className="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-2 rounded transition duration-300">
-              More Info
-            </button>
-
+          <div className="hero-btn">
+            <button>▶ Play</button>
+            <button className="btn-dark">More Info</button>
           </div>
           <TitleCard/>
         </div>
+  
       </div>
+      {/* ✅ HERO KE BAHAR */}
+      <div className="titleCard">
+        <TitleCard title={"Trending Movies"} category={"now_playing"} />
+        <TitleCard title={"Popular"} category={"popular"}/>
+        <TitleCard title={"Top Rated"} category={"top_rated"}/>
+        <TitleCard title={"Upcoming"} category={"upcoming"}/>
+
+      </div>
+       <Footer />
     </div>
   );
 }
