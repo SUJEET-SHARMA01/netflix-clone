@@ -31,10 +31,10 @@ function Home() {
       </div>
       {/* ✅ HERO KE BAHAR */}
       <div className="titleCard">
-        <TitleCard title={"Trending Movies"} category={"now_playing"} />
         <TitleCard title={"Popular"} category={"popular"}/>
         <TitleCard title={"Top Rated"} category={"top_rated"}/>
         <TitleCard title={"Upcoming"} category={"upcoming"}/>
+        <TitleCard title={"Trending Movies"} category={"now_playing"} />
 
       </div>
        <Footer />
