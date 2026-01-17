@@ -25,12 +25,15 @@ function Home() {
             <button>▶ Play</button>
             <button className="btn-dark">More Info</button>
           </div>
-          <TitleCard/>
+          <div className="titlecard">
+          <TitleCard />
+
+          </div>
         </div>
   
       </div>
       {/* ✅ HERO KE BAHAR */}
-      <div className="titleCard">
+      <div className="more-card">
         <TitleCard title={"Popular"} category={"popular"}/>
         <TitleCard title={"Top Rated"} category={"top_rated"}/>
         <TitleCard title={"Upcoming"} category={"upcoming"}/>

@@ -29,3 +29,14 @@
  color: gray;
  font-size: 14px;
 }
+
+
+@media (max-width:800px){
+    .footer-icons img{
+        width: 20px;
+    }
+    .footer ul{
+        grid-template-columns: auto auto;
+        font-size: 12px;
+    }
+}
